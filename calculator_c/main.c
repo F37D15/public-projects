@@ -1,3 +1,5 @@
+/*Including the standard i/o library*/
+
 #include <stdio.h>
 
 /*Definition of arithmetic operations*/
