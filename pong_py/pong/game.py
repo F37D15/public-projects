@@ -1,9 +1,9 @@
 from .paddle import Paddle
 from .ball import Ball
+import os
 import pygame
 import random
 pygame.init()
-
 
 class GameInformation:
     def __init__(self, left_hits, right_hits, left_score, right_score):
@@ -11,6 +11,13 @@ class GameInformation:
         self.right_hits = right_hits
         self.left_score = left_score
         self.right_score = right_score
+
+local_dir = os.path.dirname(__file__)
+Icon = pygame.image.load(os.path.join(local_dir, 'arcade-game-pong-gaming-svgrepo-com.svg'))
+
+pygame.display.set_caption('Pong by F37D15')
+
+pygame.display.set_icon(Icon)
 
 
 class Game:
@@ -21,7 +28,7 @@ class Game:
     Use the information returned from .loop() to determine when to end the game by calling
     .reset().
     """
-    SCORE_FONT = pygame.font.SysFont("comicsans", 50)
+    SCORE_FONT = pygame.font.SysFont("Noto Sans", 50)
     WHITE = (255, 255, 255)
     BLACK = (0, 0, 0)
     RED = (255, 0, 0)

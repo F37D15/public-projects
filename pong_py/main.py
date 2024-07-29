@@ -108,7 +108,7 @@ def eval_genomes(genomes, config):
 
 def run_neat(config):
     local_dir = os.path.dirname(__file__)
-    checkpoint_dir = os.path.join(local_dir, 'pong_py')
+    checkpoint_dir = os.path.join(local_dir)
     checkpoint_file = os.path.join(checkpoint_dir, 'neat-checkpoint-')
     p = neat.Checkpointer.restore_checkpoint(checkpoint_file + '29')
     #p = neat.Population(config)
@@ -124,7 +124,7 @@ def run_neat(config):
 
 def test_ai(config):
     local_dir = os.path.dirname(__file__)
-    checkpoint_dir = os.path.join(local_dir, 'pong_py')
+    checkpoint_dir = os.path.join(local_dir)
     width, height = 700, 500
     window = pygame.display.set_mode((width, height))
 
